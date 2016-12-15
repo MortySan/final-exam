@@ -21,7 +21,7 @@ public class WeatherHomepage extends PageObject {
     public WebElement input;
 
     @FindBy(xpath = "//div[@id='location_autocomplete']/div/nobr/span[2]")
-    public List<WebElement> country;
+    public List<WebElement> countryList;
 
     @FindBy(xpath = "//tr[@class='max-temp-row']/td[1]/span")
     public  WebElement maxTemp;
@@ -40,10 +40,13 @@ public class WeatherHomepage extends PageObject {
     }
 
 
-    public void selectCountry (String CountryName) {
-        for (WebElement name : country ) {
-            if ( name.getText().equals(CountryName))
+    public void selectCountry (String country) {
+        for (WebElement name : countryList ) {
+            System.out.println(name.getText());
+            if ( name.getText().contains(country)) {
                 name.click();
+                break;
+            }
         }
     }
 

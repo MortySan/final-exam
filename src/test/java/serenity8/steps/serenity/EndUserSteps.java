@@ -27,7 +27,7 @@ public class EndUserSteps extends ScenarioSteps {
     public void imperialPrint() {
         weatherHomepage.farenheitGet();
     }
-    
+
 //
 //    @Step
 //    public void should_see_definition(String definition) {
@@ -40,7 +40,7 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void flagSelect(String flag) {
-        weatherHomepage.selectCountry(flag);
+    public void flagSelect(String country) {
+        weatherHomepage.selectCountry(country);
     }
 }

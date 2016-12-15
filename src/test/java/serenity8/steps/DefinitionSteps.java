@@ -23,8 +23,8 @@ public class DefinitionSteps {
     }
 
     @When("proper $country will be selected")
-    public void countrySelection(String flag){
-        endUser.flagSelect(flag);
+    public void countrySelection(String country){
+        endUser.flagSelect(country);
     }
 
     @Then("Temperature for today will be printed")
